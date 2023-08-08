@@ -1,0 +1,17 @@
+// How we can use forEach method
+
+const numbers = [3,4,5,6,7];
+
+function myfun(number,index){
+    console.log(`index is ${index} number is ${number*2}`);
+}
+
+
+for(let i=0; i<numbers.length; i++){
+    myfun(numbers[i],i);
+}
+
+console.log("You can see output ");
+// we can replace 10 or 12th line code by single line
+
+numbers.forEach(myfun);
