@@ -15,3 +15,14 @@ console.log("You can see output ");
 // we can replace 10 or 12th line code by single line
 
 numbers.forEach(myfun);
+
+
+
+
+const users = [{firstName : "harshit", age : 23},{firstName : "harshi", age : 23},{firstName : "shit", age : 23},{firstName : "harshit", age : 23}];
+
+
+
+users.forEach(function(user){
+    console.log(user.firstName);
+})
