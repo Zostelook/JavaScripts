@@ -1,1 +1,18 @@
+function myFun(){
+    console.log("it is my original function");
+    
+    
+    // we want to return this function via myFun
+    function hello(){
+        console.log("it is returning function");
+    }
+    
+    return hello;
+}
+
+const ans = myFun();
+console.log(ans);
+
+// we can call also hello function by ans
+ans();
 
