@@ -1,0 +1,24 @@
+//setTimeout()
+
+function myFun(callback){
+    
+    //console.log(callback);
+    let x = 300;
+    console.log(x);
+    
+    callback();
+}
+
+
+myFun(function(){
+    console.log("callback function");
+});
+
+
+console.log("first invoke");
+
+setTimeout(function(){
+    console.log("I would like to invoke after 4000ms");
+},4000);
+
+console.log("Abhishek");
