@@ -26,3 +26,21 @@ const users = [{firstName : "harshit", age : 23},{firstName : "harshi", age : 23
 users.forEach(function(user){
     console.log(user.firstName);
 })
+
+
+
+//use of map method
+
+//map method
+const numbers = [4,5,6,7,8];
+
+
+
+const square = function(number){
+     return number*number;
+}
+
+
+
+const squareNumber = numbers.map(square);
+console.log(squareNumber);
