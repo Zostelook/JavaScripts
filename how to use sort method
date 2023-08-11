@@ -1,0 +1,17 @@
+
+// how to use sort method in JS
+
+//for decending order
+const numbers = [4,5,6,8,21,45];
+numbers.sort((a,b)=>{
+    return b-a;
+});
+console.log(numbers)
+
+
+//for acanding order
+const numberss = [4,5,6,8,21,45];
+numberss.sort((a,b)=>{
+    return a-b;
+});
+console.log(numberss)
