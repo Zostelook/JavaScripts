@@ -1,0 +1,15 @@
+document.write("Hi");
+
+try{
+    add();
+}
+catch{
+    console.log("function is not defined");
+}
+finally{
+    console.log("This code would be executed");
+}
+
+
+
+
