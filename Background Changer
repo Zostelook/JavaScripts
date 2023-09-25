@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlmain">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+   
+      <style>
+        #div{
+            height: 200px;
+            background-color: rgba(205,92,92,0.5);
+            margin: 50px;
+            text-align: center;
+        }
+        .inside{
+            padding: 20px;
+            border: 2px solid blueviolet;
+            background-color: chartreuse;
+            margin: 20px;
+        }
+
+        #start{
+            font-weight: bold;
+            padding: 3px;
+            color: white;
+            background-color: black;
+            width: 100px;
+            font-size: 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #stop{
+            font-weight: bold;
+            padding: 3px;
+            color: white;
+            background-color: black;
+            width: 100px;
+            font-size: 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+      </style>
+
+    
+
+</head>
+<body>
+  
+  <div id="div">
+    <div class="inside">
+        <h1><span>Background changer</span></h1>
+    </div>
+
+    <button type="button" id="start">Start</button>
+    <button type="button" id="stop">Stop</button>
+  </div>
+   
+
+
+   
+   <script>
+    //how to generate random hex value for background change
+
+const rendomColor = function(){
+    const hex = "0123456789ABCDEF";
+
+    let color = '#';
+    for(let i = 0; i<6; i++){
+        color += hex[Math.floor(Math.random()*15)];
+    }
+    return color;
+}
+let setIntervalId;
+function changeOuterDivBack(){
+   let outDiv = document.getElementById('div');
+  setIntervalId= setInterval(function(){
+    outDiv.style.background = rendomColor();
+   },2000);
+}
+
+function stopBackgrundChange(){
+   
+    clearInterval(setIntervalId);
+   
+}
+
+let startButton = document.querySelector('#start');
+startButton.addEventListener('click',changeOuterDivBack)
+
+let stopButton = document.querySelector('#stop');
+stopButton.addEventListener('click',stopBackgrundChange);
+   </script>
+   
+   
+</body>
+</html>
