@@ -11,3 +11,27 @@ function chageListItemBackgroungColor(){
     itemOneByOne.style.backgroundColor = 'green';
 })
 }
+
+function createMyHtmlElement(){
+    
+  //now we would learn here how we can create an html element using java script and append on document
+  const divElement  = document.createElement('div');
+  console.log(divElement)
+
+  //divElement.className = 'test';
+  divElement.setAttribute('class','test');
+  divElement.setAttribute('id','parent');
+
+
+   //what text you inject in your div first create text
+   const addText = document.createTextNode('This is my content');
+
+
+
+    //now inject your element into dom
+   const praentElement = document.body;
+
+   praentElement.appendChild(addText);
+
+}
+
