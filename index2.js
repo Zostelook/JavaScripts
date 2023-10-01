@@ -35,3 +35,14 @@ function createMyHtmlElement(){
 
 }
 
+function addLanguage(langName = "javaScript"){
+
+   // create li with content
+   const li = document.createElement('li');
+   li.appendChild(document.createTextNode(langName));
+   
+   // now append in dom
+   document.querySelector('.language').appendChild(li);
+}
+
+
