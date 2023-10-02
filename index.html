@@ -11,30 +11,60 @@
 </head>
 <body>
   
-       <div class="outerDiv" id="outerDiv">
-        <div class="innerDivClass" id="innerDiv">
-            <h1>This heading is inside inner div</h1>
-        </div>
-        <h1>This heading is in outer Div</h1>
+      
+       <div id="outer">
+        <p>This is para</p>
        </div>
-
-       <div class="three" id="idThree">
-          <h1>This is my third Div</h1>
-       </div>
-
-       <button type="button" onclick="changeBackgrund()">Change Background</button>
 
        <ul class="language">
         <!--list item has also block level scope-->
-        <li class="tet">One</li>
-        <li class="tet">Two</li>
-        <li class="tet">Three</li>
-        <li class="tet">Four</li>
+        <li class="tet">12</li>
+        <li class="tet">23</li>
+        <li class="tet">34</li>
+        <li class="tet">56</li>
 
        </ul>
 
-       <button type="button" onclick="addLanguage()">Add Item</button>
+       <button type="button" onclick="changeNumber()">changeNumber</button>
+
+       <script>
+        //   const div  = document.getElementById('outer');
+        //   console.log( div.innerHTML);
+
+         const li = document.querySelectorAll('.tet');
+         console.log(typeof li[0].textContent);
+
+         let sum = 0;
+         console.log(typeof sum)
+
+         for(let num of li){
+            sum = sum + Number(num.textContent);
+         }
+         console.log(sum);
+
+         const newli = document.createElement('li');
+         newli.innerHTML = `${sum}`;
+
+         document.body.appendChild(newli)
+
+
+         const anuu = 35;
+         const ab = 50;
+
+
+        console.log(`the sum of two variable ${annu}+${ab}`);
+         
+        function changeNumber(){
+            console.log('button clicked');
+        }
+
+        
+
+
+
+          
+       </script>
       
 </body>
-<script src="./index2.js"></script>
+
 </html>
