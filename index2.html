@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Learning</title>
+    <style>
+        #outer{
+            height: 500px;
+            width: 500px;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+        }
+
+        #inner{
+            height: 200px;
+            width: 200px;
+            background-color: indianred;
+            align-items: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner"></div>
+    </div>
+
+    <script>
+        document.getElementById('outer').addEventListener('click',function(){
+            console.log('outer clicked')
+        },false)
+
+        document.getElementById('inner').addEventListener('click',function(e){
+            console.log('inner clicked');
+            e.stopPropagation();
+        },false);
+    </script>
+</body>
+</html>
