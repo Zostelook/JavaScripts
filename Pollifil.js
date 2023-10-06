@@ -62,4 +62,11 @@ function even(x){
     }
 }
 
-console.log(myFilter(arr,even))
+// console.log(myFilter(arr,even))
+
+// how Reduce work
+const sum = arr.reduce( function(acc,x){
+   return acc+x;
+},0)
+
+console.log(sum)
