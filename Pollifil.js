@@ -8,8 +8,8 @@ const finalArray  = arr.map(function(element){
     return element*element;
 })
 
-console.log(arr);
-console.log(finalArray);
+// console.log(arr);
+// console.log(finalArray);
 
 
 //Now we are going to write pollifil for map method
@@ -29,4 +29,37 @@ function squre(x){
     return x*x;
 }
 
-console.log(myMap(arr,squre))
+// console.log(myMap(arr,squre))
+
+// filter, how filter work
+
+const filterArray = arr.filter(function(x){
+    if(x%2==0){
+        return x;
+    }
+})
+
+// console.log(filterArray)
+
+//Now we would like to write pollifil for filter
+
+function myFilter(arr,cb){
+    const newfilterArray = [];
+
+    for(let i=0; i<arr.length; i++){
+        let element = cb(arr[i])
+        if(element!=undefined){
+            newfilterArray.push(element)
+        }
+
+    }
+    return newfilterArray;
+}
+
+function even(x){
+    if(x%2==0){
+        return x;
+    }
+}
+
+console.log(myFilter(arr,even))
